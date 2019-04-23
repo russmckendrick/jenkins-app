@@ -3,7 +3,7 @@ node {
     stage('Build Docker Image') {
         checkout scm
         docker.withServer('tcp://192.168.99.100:2376', 'docker-swarm') {
-            app = docker.build('dockerhp/jenkins-app:latest')
+            app = docker.build('russmckendrick/jenkins-app:latest')
         }
     }
     
